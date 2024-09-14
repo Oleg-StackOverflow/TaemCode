@@ -9,7 +9,6 @@ public class Math {
         System.out.println(result1);
 
         d = 7.89d;
-        System.out.println(d);
     }
 
 }
