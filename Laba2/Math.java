@@ -11,6 +11,10 @@ public class Math {
         System.out.println(result1);
 
         d = 7.89d;
+
+        double result2 = java.lang.Math.log(java.lang.Math.abs(2*c/a+java.lang.Math.sqrt(java.lang.Math.tanh(java.lang.Math.abs(b)*c/Logarithm.log(c, d)))));
+
+        System.out.println(result2);
     }
 
 }
