@@ -13,7 +13,11 @@ public class Rivnanna {
         d = 7.89d;
         a = -0.58d;
 
-        double result2 = Math.log(Math.abs(2*c/a+Math.sqrt(Math.tanh(Math.abs(b)*c)/Logarithm.log(c, d))));
+        double result2_1 = Math.abs(b)*c/Logarithm.log(c, d);
+
+        double result2_2 = Math.abs(2*c/a+Math.sqrt(Math.tanh(result2_1)));
+
+        double result2 = Math.log(result2_2);
 
         System.out.println(result2);
 
@@ -22,7 +26,13 @@ public class Rivnanna {
         c = 1.05d;
         d = 0.78d;
 
-        double result3 = Logarithm.log(a, Math.abs(c/a*Math.sqrt(Math.tanh(Math.abs(b)*c)/Logarithm.log(Math.sqrt(c), d))));
+        double result3_1 = Math.sqrt(c);
+
+        double result3_2 = Math.abs(b)*c/Logarithm.log(result3_1, d);
+
+        double result3_3 = Math.abs(2*c/a+Math.sqrt(Math.tanh(result3_2)));
+
+        double result3 = Logarithm.log(a, result3_3);
 
         System.out.println(result3);
 
