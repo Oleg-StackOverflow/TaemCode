@@ -2,10 +2,10 @@ package Laba2;
 
 public class Rivnanna {
     public static void main(String[] args) {
-        double a = 0.58d;
-        double b = -0.34d;
-        double c = 1.25d;
-        double d = 0.89d;
+        double a = 0.58;
+        double b = -0.34;
+        double c = 1.25;
+        double d = 0.89;
         double result1 = Math.sqrt(c)/Math.tan(a)+Math.sqrt(1/Math.tanh(2*c)/ Logarithm.log(a, d));
 
         System.out.println(result1);
