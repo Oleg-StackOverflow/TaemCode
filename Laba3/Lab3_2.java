@@ -3,6 +3,7 @@ package Laba3;
 import java.util.Scanner;
 
 public class Lab3_2 {
+
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
@@ -20,6 +21,7 @@ public class Lab3_2 {
         double summ_1 = 0;
 
         if(t < 0) {
+
             for (double i = 1; i < n; i++) {
 
                 summ_1 = summ + Math.pow(t, 2)*i;

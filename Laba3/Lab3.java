@@ -3,6 +3,7 @@ package Laba3;
 import java.util.Scanner;
 
 public class Lab3 {
+    
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
@@ -40,6 +41,7 @@ public class Lab3 {
         }
 
         for (double i = 1; i <= k; i++) {
+
             summ_1 = summ + Math.log(-t * i) * Math.cos(Math.sqrt(s * (1 / Math.pow(i, 2))));
             summ = summ_1;
 
