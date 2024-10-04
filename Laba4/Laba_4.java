@@ -1,7 +1,5 @@
 package Laba4;
 
-import java.util.Arrays;
-
 public class Laba_4 {
 
     public static void main(String[] args) {

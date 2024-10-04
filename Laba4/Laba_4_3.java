@@ -14,9 +14,15 @@ public class Laba_4_3 {
     }
     public static int[] transformArray(int[] array) {
         int[] newArray = new int[array.length];
+        int max_a = 0;
+        for (int a = 1; a < array.length; a++) {
+            if (array[a] > max_a) {
+                max_a = array[a];
+            }
+        }
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
-                newArray[i] = array[i];
+                newArray[i] = array[i]+ max_a;
             } else if (array[i] == 0) {
                 newArray[i] = 1;
             } else {
