@@ -14,7 +14,6 @@ public class Laba5_2 {
 
         int[][] result = new int[rowsA][colsB];
 
-
         for (int i = 0; i < rowsA; i++) {
             for (int j = 0; j < colsB; j++) {
                 for (int k = 0; k < colsA; k++) {
@@ -39,16 +38,21 @@ public class Laba5_2 {
                 {9, 10, 11},
                 {11, 12, 13}
         };
+        try {
 
-        int[][] product = multiply(matrixA, matrixB);
+            int[][] product = multiply(matrixA, matrixB);
 
 
-        System.out.println("Результат множення матриць:");
-        for (int i = 0; i < product.length; i++) {
-            for (int j = 0; j < product[0].length; j++) {
-                System.out.print(product[i][j] + " ");
+            System.out.println("Результат множення матриць:");
+            for (int i = 0; i < product.length; i++) {
+                for (int j = 0; j < product[0].length; j++) {
+                    System.out.print(product[i][j] + " ");
+                }
+                System.out.println();
             }
-            System.out.println();
+        } catch (IllegalArgumentException e) {
+
+            System.out.println("Помилка: " + e.getMessage());
         }
     }
 
