@@ -11,9 +11,9 @@ public class SortContext {
         this.strategy = strategy;
     }
 
-    public void sortArray(short[] array) {
+    public short[] sortArray(short[] array) {
         System.out.println("Використовуєтся: " + strategy.getClass().getSimpleName());
-        strategy.sort(array);
+        return strategy.sort(array);
     }
 }
 

@@ -45,7 +45,7 @@ public class Main {
             }
 
             System.out.println("До: " + Arrays.toString(arr));
-            context.sortArray(arr);
+            arr = context.sortArray(arr);
             System.out.println("Після: " + Arrays.toString(arr));
         }
 
