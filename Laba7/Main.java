@@ -22,6 +22,7 @@ public class Main {
             System.out.println("1. SelectionSort");
             System.out.println("2. InsertionSort");
             System.out.println("3. StalinSort");
+            System.out.println("4. MergeSort");
 
             int choice = scanner.nextInt();
 
@@ -34,6 +35,9 @@ public class Main {
                     break;
                 case 3:
                     context.setStrategy(new StalinSort());
+                    break;
+                case 4:
+                    context.setStrategy(new MergeSort());
                     break;
                 default:
                     System.out.println("Неправильний вибір. Через це буде використано SelectionSort.");
