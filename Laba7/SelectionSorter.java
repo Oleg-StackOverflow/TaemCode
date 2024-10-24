@@ -1,6 +1,7 @@
 package Laba7;
 
 public class SelectionSorter implements SortingStrategy {
+    @Override
     public short[] sort(short[] array) {
         for (int i = 0; i < array.length; i++) {
             int pos = i;

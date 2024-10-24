@@ -2,6 +2,7 @@ package Laba7;
 
 
 public class InsertionSort implements SortingStrategy {
+    @Override
     public short[] sort(short[] array) {
         for (int i = 1; i < array.length; i++) {
             short key = array[i];
