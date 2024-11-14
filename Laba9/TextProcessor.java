@@ -14,7 +14,7 @@ public class TextProcessor {
             System.out.println("3. Вихід");
 
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline left-over
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
