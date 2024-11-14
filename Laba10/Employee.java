@@ -25,6 +25,6 @@ class Employee {
 
     @Override
     public String toString() {
-        return firstName + " " + lastName + " (Salary: " + salary + ")";
+        return firstName + " " + lastName + " (Заробіток: " + salary + ")";
     }
 }
