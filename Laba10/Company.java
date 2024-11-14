@@ -54,7 +54,7 @@ class Company {
         }
         return result;
     }
-    
+
     public List<Employee> getAllEmployees() {
         List<Employee> allEmployees = new ArrayList<>();
         allEmployees.add(director);
