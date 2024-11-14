@@ -27,15 +27,11 @@ class Company {
 
     public double findMaxSalary() {
         double maxSalary = director.getSalary();
-        Iterator<Department> deptIterator = departments.iterator();
-        while (deptIterator.hasNext()) {
-            Department department = deptIterator.next();
+        for (Department department : departments) {
             if (department.getManager().getSalary() > maxSalary) {
                 maxSalary = department.getManager().getSalary();
             }
-            Iterator<Employee> empIterator = department.getEmployees().iterator();
-            while (empIterator.hasNext()) {
-                Employee employee = empIterator.next();
+            for (Employee employee : department.getEmployees()) {
                 if (employee.getSalary() > maxSalary) {
                     maxSalary = employee.getSalary();
                 }
@@ -58,18 +54,20 @@ class Company {
         }
         return result;
     }
-
+    
     public List<Employee> getAllEmployees() {
         List<Employee> allEmployees = new ArrayList<>();
         allEmployees.add(director);
-        for (Department department : departments) {
+        Iterator<Department> deptIterator = departments.iterator();
+        while (deptIterator.hasNext()) {
+            Department department = deptIterator.next();
             allEmployees.add(department.getManager());
-            for (Employee employee : department.getEmployees()) {
-                allEmployees.add(employee);
+            Iterator<Employee> empIterator = department.getEmployees().iterator();
+            while (empIterator.hasNext()) {
+                allEmployees.add(empIterator.next());
             }
         }
         return allEmployees;
     }
 }
-
 
