@@ -1,13 +1,12 @@
-package Laba10;
+package Laba11;
 
 public class Main {
     public static void main(String[] args) {
-
         Employee director = new Employee("Степан", "Бандера", 100000);
         Employee manager1 = new Employee("Богдан", "Буцик", 80000);
         Employee manager2 = new Employee("Олег", "Захаров", 85000);
         Employee emp1 = new Employee("Артем", "Христенок", 70000);
-        Employee emp2 = new Employee("Микола", "Шейко", 90000);
+        Employee emp2 = new Employee("Марго", "Гарбер", 90000);
         Employee emp3 = new Employee("Олександр", "Несміян", 60000);
 
         Department dept1 = new Department("IT", manager1);
