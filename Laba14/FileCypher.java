@@ -10,15 +10,18 @@ public class FileCypher {
         try (FileInputStream fis = new FileInputStream(source);
              FileOutputStream fos = new FileOutputStream(destination)) {
 
+            byte[] buffer = new byte[1024];
+            int bytesRead;
 
-            int data;
-            while ((data = fis.read()) != -1) {
-                int encryptedData = data ^ key;
-
-                fos.write(encryptedData);
+            while ((bytesRead = fis.read(buffer)) != -1) {
+                for (int i = 0; i < bytesRead; i++) {
+                    buffer[i] = (byte) (buffer[i] ^ key);
+                }
+                fos.write(buffer, 0, bytesRead);
             }
 
             System.out.println("Файл успішно зашифровано!");
+
         } catch (FileNotFoundException e) {
             System.err.println("Помилка: Файл не знайдено. Перевірте шлях до файлу: " + source);
         } catch (IOException e) {
