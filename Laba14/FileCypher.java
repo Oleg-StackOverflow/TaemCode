@@ -30,8 +30,8 @@ public class FileCypher {
     }
 
     public static void main(String[] args) {
-        String source = "K:\\код\\Laba14\\test.txt";
-        String destination = "K:\\код\\Laba14\\encrypted.txt";
+        String source = "test.txt";
+        String destination = "encrypted.txt";
         byte key = 42;
 
         cypher(source, destination, key);

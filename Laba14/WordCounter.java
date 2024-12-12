@@ -25,7 +25,7 @@ public class WordCounter {
     }
 
     public static void main(String[] args) {
-        String filename = "K:\\код\\Laba14\\test.txt";
+        String filename = "test.txt";
         long result = numberOfWords(filename);
 
         if (result > 0) {
