@@ -15,9 +15,7 @@ public class Selection_sort_Data {
         }
 
         for (int[] arr : data) {
-            System.out.print(Arrays.toString(arr) + " => ");
             SelectionSorter.sort(arr);
-            System.out.println(Arrays.toString(arr));
         }
     }
 
