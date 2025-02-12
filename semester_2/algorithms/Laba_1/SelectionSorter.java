@@ -18,7 +18,7 @@ public class SelectionSorter {
         }
 
         long endTime = System.nanoTime();
-        long elapsedTime = endTime - startTime;
-        System.out.println("Час виконання сортування: " + elapsedTime + " наносекунд");
+        double elapsedTime = (endTime - startTime) / 1_000_000_000.0; // Переведення в секунди
+        System.out.println("Час виконання сортування: " + elapsedTime + " секунд");
     }
 }
