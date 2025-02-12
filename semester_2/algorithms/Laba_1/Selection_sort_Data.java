@@ -1,17 +1,19 @@
 package semester_2.algorithms.Laba_1;
 
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Selection_sort_Data {
     public static void main(String[] args) {
-        int[][] data = {
-                {},
-                {1},
-                {0, 3, 2, 1},
-                {4, 3, 2, 1, 0},
-                {6, 8, 3, 123, 5, 4, 1, 2, 0, 9, 7},
-                {860,8,200,9,62, 24, 89, 19, 52, 54, 31, 91, 31, 36, 62, 24, 89, 19, 52, 54, 31, 91, 31, 36, 62, 24, 89, 19, 52, 54, 31, 91, 31, 36}
-        };
+        int[][] data = readDataFromFile("data.txt");
+
+        if (data.length == 0) {
+            System.out.println("Файл порожній або неправильно відформатований.");
+            return;
+        }
+
         for (int[] arr : data) {
             System.out.print(Arrays.toString(arr) + " => ");
             SelectionSorter.sort(arr);
@@ -19,4 +21,24 @@ public class Selection_sort_Data {
         }
     }
 
+    public static int[][] readDataFromFile(String filename) {
+        List<int[]> dataList = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] numbers = line.trim().split("\\s+|,");
+                int[] array = Arrays.stream(numbers)
+                        .mapToInt(Integer::parseInt)
+                        .toArray();
+                dataList.add(array);
+            }
+        } catch (IOException e) {
+            System.err.println("Помилка читання файлу: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.err.println("Файл містить некоректні дані.");
+        }
+
+        return dataList.toArray(new int[0][]);
+    }
 }
