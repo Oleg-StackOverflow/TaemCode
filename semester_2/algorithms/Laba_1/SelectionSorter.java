@@ -1,7 +1,7 @@
 package semester_2.algorithms.Laba_1;
 
 public class SelectionSorter {
-    public static void sort(short[] array) {
+    public static void sort(int[] array) {
         long startTime = System.nanoTime();
 
         for (int i = 0; i < array.length; i++) {
