@@ -15,9 +15,6 @@ public class SortingComparison {
         int[] arr2 = array.clone();
         int[] arr3 = array.clone();
 
-//        QuickSorter.comparisons = 0;
-//        MedianQuickSorter.comparisons = 0;
-        ThreePivotQuickSort.comparisons = 0;
 
 //        QuickSorter.sort(arr1);
 //        MedianQuickSorter.sort(arr2);
