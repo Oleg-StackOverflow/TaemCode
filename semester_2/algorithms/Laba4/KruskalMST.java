@@ -1,7 +1,6 @@
 package semester_2.algorithms.Laba4;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -83,7 +82,7 @@ public class KruskalMST {
     public static List<Edge> kruskalMST(int[][] matrix) {
         int n = matrix.length;
         List<Edge> edges = matrixToEdgeList(matrix);
-        
+
         edges.sort(Comparator.comparingInt(e -> e.weight));
 
         UnionFind uf = new UnionFind(n);
